@@ -1,0 +1,26 @@
+<?php
+$levels = [
+  'a2',
+  'b1',
+  'b2',
+  'c1',
+  'c2'
+];
+?>
+<form method="post">
+    <label for="level">Poziom</label>
+    <select name="level" id="level">
+        <?php foreach($levels as $_level): ?>
+        <option value="<?php echo $_level; ?>" <?php echo isset($_POST['level']) && $_POST['level'] == $_level ? 'selected' : ''; ?>><?php echo $_level; ?></option>
+        <?php endforeach; ?>
+    </select>
+
+    <!--<input type="hidden" name="offset" value="<?php echo $offset; ?>">-->
+
+    <button type="submit" name="action" value="setLevel">Ustaw poziom</button>
+</form>
+
+
+
+
+<br>

@@ -1,0 +1,22 @@
+<form method="POST">
+    <table>
+        <tr>
+            <th>Tłumaczenie</th>
+            <th>infinitive</th>
+            <th>past tense</th>
+            <th>past participle</th>
+        </tr>
+
+        <?php foreach ($results as $result): ?>
+        <tr>
+            <td><?php echo $result['translation'] ?></td>
+            <td><?php echo $result['infinitive'] ?></td>
+            <td><?php echo $result['past_tense'] ?></td>
+            <td><?php echo $result['past_participle'] ?></td>
+        </tr>
+        <?php endforeach; ?>
+
+
+    </table>
+    <button type="submit" name="action" value="check">Sprawdź</button>
+</form>
